@@ -1,0 +1,20 @@
+<h1>Welcome !!!</h1>
+<div class="container">
+  <p>welcome {{username}}</p>
+
+  <a style="cursor: pointer" routerLink="/todos">Todos</a>
+</div>
+
+<div class="container">
+  Click here to get a customized Welcome Message
+  <button class="btn btn-primary" (click)="getWelComeMessageWithParameter()">Welcome</button>
+</div>
+
+<div class="container" *ngIf="welcomeMessage">
+  <h2>Your Customized Message</h2>
+  {{welcomeMessage}}
+</div>
+
+<div class="container" *ngIf="errorMessage">
+  <h2>Exception occured during the call to the server</h2>
+</div>
